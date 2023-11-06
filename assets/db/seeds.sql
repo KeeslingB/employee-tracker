@@ -1,11 +1,22 @@
-INSERT INTO department (id, name)
-VALUES (1,'CEO'),
-       (2,'Manager'),
-       (3,'Sales'),
-       (4,'Fallback'),
-       (5,'Grunt'),
-       (6,'Tech');
+INSERT INTO department (name)
+VALUES ('Sales'),
+       ('Supervisor'),
+       ('Star'),
+       ('Fallback'),
+       ('Grunt'),
+       ('Tech');
 
 
-INSERT INTO row (id,title, salary,department:id) 
-VALUES ()
+INSERT INTO employee ( first_name, last_name ) 
+ ('Brendan','Keesling'),
+ ('Jack','Leonard'),
+ ('Brook','Laboon'),
+ ('Rorona','Zoro'),
+ ('Hailey','Latney'),
+ ('Richard','Tonnes');
+
+
+
+INSERT INTO role ( title, salary ) 
+VALUES ('');
+
