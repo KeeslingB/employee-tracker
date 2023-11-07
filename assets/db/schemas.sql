@@ -5,35 +5,20 @@ USE employees_db;
 
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30),
-);
-
-CREATE TABLE role (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(30),
-  salary INT(100),
-  department_id INT NOT NULL,
+  name VARCHAR(30)
 );
 
 CREATE TABLE employee (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30),
   last_name VARCHAR(30),
-  role_id INT NOT NULL,
-  manager_id INT NOT NULL,
+  role_id INT REFERENCES role_id,
+  manager_id INT REFERENCES id
 );
 
-
-
-
-
-
-
-
--- CREATE TABLE courses (
---   id INT NOT NULL,
---   course_title VARCHAR(30) NOT NULL,
---   course_description TEXT NOT NULL,
---   active BOOLEAN NOT NULL,
---   date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
--- );
+CREATE TABLE role (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(30),
+  salary DECIMAL(50),
+  department_id INT REFERENCES department_db
+);
