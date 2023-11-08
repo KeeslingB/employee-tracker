@@ -1,33 +1,31 @@
+USE employees_db;
+
 INSERT INTO department (name)
 VALUES 
 ('Sales'),
-('Sales'),
 ('Engineering'),
 ('Finance'),
-('Engineering'),
-('Legal'),
-('Legal'),
-('finance');
+('Legal');
 
-
-INSERT INTO employee ( first_name, last_name ) 
-VALUES
- ('Brendan','Keesling'),
- ('Jack','Leonard'),
- ('Brook','Laboon'),
- ('Rorona','Zoro'),
- ('Hailey','Latney'),
- ('Richard','Tonnes'),
- ('Sally', 'Thompson');
-
-
-INSERT INTO role ( title, salary)
+INSERT INTO role ( title, salary, department_id)
 VALUES 
-('Sales Lead', 75000),
-('Salesperson', 55000),
-('Lead Engineer', 80000),
-('Software Engineer', 90000),
-('Account Manager', 50000),
-('Accountant', 30000),
-('Legal Team Lead', 45000),
-('Lawyer', 80000);
+('Sales Lead', 75000,1),
+('Salesperson', 55000,1),
+('Lead Engineer', 80000,2),
+('Software Engineer', 90000,2),
+('Account Manager', 50000,3),
+('Accountant', 30000,3),
+('Legal Team Lead', 45000,4),
+('Lawyer', 80000,5);
+
+INSERT INTO employee ( first_name, last_name, role_id ) 
+VALUES
+ ('Brendan','Keesling',2),
+ ('Jack','Leonard', 1),
+ ('Brook','Laboon',2),
+ ('Rorona','Zoro',3),
+ ('Hailey','Latney',4),
+ ('Richard','Tonnes',5),
+ ('Sally', 'Thompson',5);
+
+
