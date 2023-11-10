@@ -16,7 +16,7 @@ VALUES
 ('Account Manager', 50000,3),
 ('Accountant', 30000,3),
 ('Legal Team Lead', 45000,4),
-('Lawyer', 80000,5);
+('Lawyer', 80000,4);
 
 INSERT INTO employee ( first_name, last_name, role_id ) 
 VALUES
@@ -25,7 +25,7 @@ VALUES
  ('Brook','Laboon',2),
  ('Rorona','Zoro',3),
  ('Hailey','Latney',4),
- ('Richard','Tonnes',5),
- ('Sally', 'Thompson',5);
+ ('Richard','Tonnes',3),
+ ('Sally', 'Thompson',4);
 
 
