@@ -53,8 +53,6 @@ function menu() {
   })
 }
 
-
-
 function addDepartment() {
   inquirer.prompt([{
     type:'input',
@@ -74,13 +72,13 @@ function viewDepartments() {
   })
 }
 
-
 function addRole() {
  inquirer.prompt([{
   type: 'input',
   message: 'What is the new Role Title?',
   name: 'newRoleT',
- },{
+ },
+ {
   type:'input',
   message:'What is the new Roles Salary?',
   name:'newWage'
@@ -91,7 +89,7 @@ function addRole() {
   name:'rolesId'
 },
 ]).then(response => {
-  db.query('INSERT INTO role ( title, salary, department_id)VALUES(?,?,?)',[response.newRoleT,response.newWage, response.rolesId],(err) => {
+  db.query('INSERT INTO roles ( title, salary, department_id)VALUES(?,?,?)',[response.newRoleT,response.newWage, response.rolesId],(err) => {
     allRoles();
   }) 
  })
@@ -106,7 +104,7 @@ function allEmployees(){
 
 
 function allRoles() {
-  db.query('SELECT * FROM role', (err, data) =>{
+  db.query('SELECT * FROM roles', (err, data) =>{
     printTable(data) ;
     menu();
   })
@@ -126,7 +124,7 @@ inquirer.prompt([
   },
   {
     type: 'input',
-    message: 'Employees Role ID',
+    message: 'Employees Role ID?',
     name:'newId'
   },
   {
@@ -142,49 +140,30 @@ inquirer.prompt([
 }
 
 function updateRole() {
+  // connection.query(`SELECT * FROM roles;`, (err, res) => {
+  //   if (err) throw err;
+  //   let roles = res.map(roles => ({name: roles.title, value: roles.roles_id }));
+  inquirer.prompt([
+    // {
+    //   type: 'input',
+    //   message: 'What role title would you like to update?',
+    //   name: 'roleUpdate',
+    // },
+    {
+      type: 'input',
+      message: 'roles new salary?',
+      name: 'roleSalary'
+    },
+    {
+      type: 'input',
+      message: 'what department id does this role belong to?',
+      name:'roleSetId'
+    },
+])}
+// )}
 
-}
+
 
 function quit() {
-
+  process.exit();
 }
-
-// choices == function for corresponding choice?
-
-
-
-
-
-// if statements or switch case for options?
-
-
-//write funtion for adding employee
-
-
-//updating employee role
-
-//view all roles
-
-//add role
-
-//view all departments
-
-//add department
-
-//quit
-
-
-
-
-
-
-
-
-
-// module.exports = prompt;
-
-
-
-// module.exports = [inquirer.prompt()];
-
-// doing anything? 

@@ -9,6 +9,4 @@ const db = mysql.createConnection(
   console.log(`Connected to the employees_db database.`)
 );
 
-
-
 module.exports = db;
