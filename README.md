@@ -13,4 +13,4 @@ W3.schools:  [mySQL SQL](https://www.w3schools.com/mysql/mysql_sql.asp)
 ## Contribute to Project
 Project Github: [Here](https://github.com/KeeslingB/employee-tracker)
 
-Walkthrough Video: [Here]()
+Walkthrough Video: [Here](https://drive.google.com/file/d/12wkkLMZX5sDQSprDR3G8yTdLjBGZCx7B/view)
